@@ -28,6 +28,6 @@ client.add_user(
 )
 
 # Remove User
-client.remove_user("email@gmail.com")
+client.remove_user(inbound_tag="inbound", email="email@gmail.com")
 ```
 
