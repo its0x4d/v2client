@@ -3,6 +3,5 @@ __pycache__/
 .venv/
 __pycache__/*.py[cod]
 *.pyc
-main.py
 compile.py
 apigen.py
