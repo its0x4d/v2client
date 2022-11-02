@@ -9,7 +9,9 @@ pip install v2client
 # Usage (for V2Ray support)
 
 ```python
-from v2client import V2RayClient, utils
+from v2client import V2RayClient
+from v2client import utils
+
 
 client = V2RayClient("SERVER_IP_ADDRESS", 8080)
 usage = client.get_user_usage("email@gmail.com")
