@@ -22,7 +22,7 @@ def is_email_valid(email: str) -> bool:
     :param email: An email address.
     :return: True if the email is valid, False otherwise.
     """
-    return re.match(r"[^@]+@[^@]+\.[^@]+", email) is not None
+    return re.match(r"[a-zA-Z\d_.+-]+@[a-zA-Z\d-]+\.[a-zA-Z\d-.]+$", email) is not None
 
 
 def random_uuid() -> str:
