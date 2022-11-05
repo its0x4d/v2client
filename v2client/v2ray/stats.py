@@ -54,11 +54,9 @@ class StatsAPI(V2RayBase):
             upload = stub.GetStats(
                 stats_command_pb2.GetStatsRequest(name=f"user>>>{email}>>>traffic>>>uplink", reset=reset)
             )
+            return UsageResponse(download.stat.value, upload.stat.value)
         except grpc.RpcError as e:
-            if "not found" in e.details():
-                raise exceptions.UserNotFound(email)
-            raise e
-        return UsageResponse(download.stat.value, upload.stat.value)
+            exceptions.auto_raise(e)
 
     def query_stats(self, pattern: str, reset: bool = False) -> QueryListResponse:
         """
