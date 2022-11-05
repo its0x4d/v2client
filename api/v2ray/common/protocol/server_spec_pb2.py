@@ -11,8 +11,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from api.common.net import address_pb2 as common_dot_net_dot_address__pb2
-from api.common.protocol import user_pb2 as common_dot_protocol_dot_user__pb2
+from api.v2ray.common.net import address_pb2 as common_dot_net_dot_address__pb2
+from api.v2ray.common.protocol import user_pb2 as common_dot_protocol_dot_user__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
