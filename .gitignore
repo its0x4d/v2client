@@ -6,3 +6,4 @@ __pycache__/*.py[cod]
 test.py
 compile.py
 apigen.py
+Makefile
