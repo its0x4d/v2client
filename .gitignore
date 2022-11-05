@@ -7,3 +7,5 @@ test.py
 compile.py
 apigen.py
 Makefile
+dist/
+v2client.egg-info/
