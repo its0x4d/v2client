@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from api.app.log.command import config_pb2 as app_dot_log_dot_command_dot_config__pb2
+from api.v2ray.app.log.command import config_pb2 as app_dot_log_dot_command_dot_config__pb2
 
 
 class LoggerServiceStub(object):

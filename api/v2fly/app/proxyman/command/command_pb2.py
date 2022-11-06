@@ -11,10 +11,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from api.common.protocol import user_pb2 as common_dot_protocol_dot_user__pb2
+from api.v2ray.common.protocol import user_pb2 as common_dot_protocol_dot_user__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
-from api.common.protoext import extensions_pb2 as common_dot_protoext_dot_extensions__pb2
-import config_pb2 as config__pb2
+from api.v2fly.common.protoext import extensions_pb2 as common_dot_protoext_dot_extensions__pb2
+import api.v2fly.config_pb2 as config__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
