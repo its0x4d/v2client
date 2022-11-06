@@ -1,12 +1,12 @@
-import grpc # noqa
+import grpc  # noqa
 
 from api.v2ray.app.proxyman.command import command_pb2, command_pb2_grpc
 from api.v2ray.common.protocol import user_pb2
 from api.v2ray.common.protocol.headers_pb2 import SecurityConfig
 from api.v2ray.proxy.vless import account_pb2 as vless_account_pb2
 from api.v2ray.proxy.vmess import account_pb2 as vmess_account_pb2
-from v2client import exceptions
 from v2client import enum as v2types
+from v2client import exceptions
 from v2client.utils import to_typed_message
 from v2client.v2ray import V2RayBase
 
@@ -71,9 +71,9 @@ class ProxyAPI(V2RayBase):
         :return: None
         """
         stub = command_pb2_grpc.HandlerServiceStub(self.channel)
-        if proxy_type == "vless":
+        if proxy_type == v2types.ProxyTypes.VLESS:
             account = self._vless_account_validator(**kwargs)
-        elif proxy_type == "vmess":
+        elif proxy_type == v2types.ProxyTypes.VMESS:
             account = self._vmess_account_validator(**kwargs)
         else:
             raise exceptions.InvalidProxyType(proxy_type=proxy_type)
