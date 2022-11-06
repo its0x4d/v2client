@@ -8,7 +8,7 @@ with open('README.md') as f:
 
 setuptools.setup(
     name="v2client",
-    version="1.0.0",
+    version="1.1.0",
     author="Mostafa Mosavi",
     author_email="mostafa.uwsgi@gmail.com",
     description="A V2Ray/V2Fly client for Python",
