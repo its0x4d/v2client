@@ -1,4 +1,4 @@
-# V2Client - A V2Ray/V2Fly client for python
+# V2Client - A V2Ray server management for python
 
 # Installation
 
@@ -6,7 +6,7 @@
 pip install v2client
 ```
 
-# Usage (for V2Ray support)
+# Usage
 
 ```python
 from v2client import utils
