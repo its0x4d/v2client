@@ -40,7 +40,7 @@ def auto_raise(e) -> None:
     :raises: UserNotFound, UserAlreadyExists, UnkownError, InboundNotFound
     """
     user_not_found = [
-        re.compile(r"app/stats/command: user>>>.+>>>traffic>>>.+ not found."),
+        re.compile(r"app/.+/command: user>>>.+>>>traffic>>>.+ not found."),
         re.compile(r"proxy/.*: User .* not found."),
     ]
     if "inbound: handler not found:" in e.details():
