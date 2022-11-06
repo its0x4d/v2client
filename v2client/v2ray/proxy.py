@@ -1,4 +1,4 @@
-import grpc
+import grpc # noqa
 
 from api.v2ray.app.proxyman.command import command_pb2, command_pb2_grpc
 from api.v2ray.common.protocol import user_pb2

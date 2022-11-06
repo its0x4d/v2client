@@ -1,4 +1,4 @@
-import grpc
+import grpc # noqa
 from typing import List
 from v2client import exceptions
 from dataclasses import dataclass
