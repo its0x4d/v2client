@@ -13,6 +13,11 @@ class UnkownError(Exception):
     pass
 
 
+class UnknownService(Exception):
+    def __init__(self, service: str):
+        super().__init__(f"Service '{service}' is not set in V2Ray config file.")
+
+
 class InvalidProxyType(Exception):
     """Raised when the config is not supported by the system."""
 
@@ -44,5 +49,8 @@ def auto_raise(e) -> None:
         raise UserNotFound(e.details().split(":")[-1].strip())
     elif "already exists" in e.details():
         raise UserAlreadyExists(e.details().split(":")[-1].strip())
+    elif "unknown service" in e.details():
+        service = re.match(r".*\.command\.(\w+)", e.details()).group(1)
+        raise UnknownService(service)
     else:
         raise UnkownError(e.details())
